@@ -11,6 +11,7 @@ body {
   height: 100vh;
   padding: 0;
   margin: 0;
+  background-color: aliceblue;
 }
 
 .wrapper {
@@ -64,7 +65,6 @@ form {
   display: flex;
   justify-content: center;
   grid-row: 2 / 3;
-  background-color: azure;
 }
 
 .today {
@@ -74,6 +74,7 @@ form {
   border-radius: 12px;
   display: flex;
   padding: 30px 0 30px 30px;
+  background-color: azure;
 }
 
 .now {
