@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  height: 100vh;
+}
+
+.grid-container {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 10% 45% 45%;
+}
+
+.top {
+  position: relative;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+form {
+  align-self: center;
+}
+
+.toggle-unity {
+  position: absolute;
+  right: 0;
+}
+
+.middle {
+  display: flex;
+  justify-content: center;
+
+  grid-row: 2 / 3;
+}
+
+.today {
+  width: 90%;
+  height: auto;
+  border: 1px solid black;
+  border-radius: 12px;
+  display: flex;
+  padding: 40px 0 40px 40px;
+}
+
+.now {
+  border-right: 3px solid rgb(0, 162, 255);
+  width: 40%;
+  display: grid;
+  grid-auto-rows: 50px 50px 1fr 50px 50px;
+}
+
+.city-name {
+  font-size: 2em;
+}
+
+.max-temp {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.min-temp {
+  font-size: 2em;
+}
+
+.today-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+}
+
+img {
+  width: 120px;
+  height: auto;
+}
+
+.today-info span {
+  font-size: 4em;
+}
+
+.city-name {
+  text-align: center;
+}
+
+.additional {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+}
+
+.rain,
+.sun,
+.wind {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  padding: 40px;
+}
+
+i {
+  font-size: 4em;
+}
+
+.rain,
+.sun {
+  border-right: 3px solid rgb(0, 162, 255);
+}
+
+.bottom {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  grid-row: 3 / 4;
+}
+
+.next-day1,
+.next-day2,
+.next-day3 {
+  height: 80%;
+  width: 25%;
+  border: 1px solid black;
+  border-radius: 12px;
+}
+
+.next-day1,
+.next-day2,
+.next-day3 {
+  display: grid;
+  grid-auto-columns: 30px 1fr 30px 30px;
+  font-size: 0.8em;
+}

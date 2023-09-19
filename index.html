@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/f853d09d28.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="grid-container">
+        <div class="top">
+          <form>
+            <label for="city">Search</label>
+            <input type="text" id="city" name="city" />
+          </form>
+          <button class="toggle-unity">Toggle</button>
+        </div>
+
+        <div class="middle">
+          <div class="today">
+            <div class="now">
+              <span class="day"></span>
+              <p class="city-name"></p>
+              <span class="today-info">
+                <img src="" class="current-ico" />
+                <span class="current-temp"></span>
+              </span>
+              <p class="max-temp"></p>
+              <p class="min-temp"></p>
+            </div>
+            <div class="additional">
+              <div class="rain">
+                <i class="fa-solid fa-droplet"></i>
+                <p class="rain-chance"></p>
+                <p class="avg-humidity"></p>
+              </div>
+              <div class="sun">
+                <i class="fa-solid fa-sun"></i>
+                <p class="uv"></p>
+                <p class="condition"></p>
+              </div>
+              <div class="wind">
+                <i class="fa-solid fa-wind"></i>
+                <p class="current-wind"></p>
+                <p class="max-wind"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <div class="next-day1">
+            <span class="day1"></span>
+            <span class="day1-info">
+              <img src="" class="fore1-ico" />
+              <span class="avg-temp1"></span>
+            </span>
+            <p class="max-temp1"></p>
+            <p class="min-temp1"></p>
+          </div>
+
+          <div class="next-day2">
+            <span class="day2"></span>
+            <span class="day2-info">
+              <img src="" class="fore2-ico" />
+              <span class="avg-temp2"></span>
+            </span>
+            <p class="max-temp2"></p>
+            <p class="min-temp2"></p>
+          </div>
+
+          <div class="next-day3">
+            <span class="day3"></span>
+            <span class="day3-info">
+              <img src="" class="fore3-ico" />
+              <span class="avg-temp3"></span>
+            </span>
+            <p class="max-temp3"></p>
+            <p class="min-temp3"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
