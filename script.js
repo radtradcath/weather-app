@@ -26,8 +26,8 @@ const minTemp2 = document.querySelector(".min-temp2");
 const maxTemp2 = document.querySelector(".max-temp2");
 const toggleBtn = document.querySelector(".toggle-unit");
 let isF = false;
-let city = "São Paulo";
-console.log(city);
+let city;
+
 toggleBtn.addEventListener("click", () => {
   if (!isF) {
     toggleBtn.textContent = "To °C";
@@ -83,9 +83,11 @@ function renderAPI(result) {
       "max: " + result.forecast.forecastday[2].day.maxtemp_f + " °F";
   }
   cityName.textContent =
-    result.location.region + ", " + result.location.country;
+    result.location.name + ", " + result.location.region + ' - ' + result.location.country;
   currentConditionIco.src = result.current.condition.icon;
   todayDate.textContent = result.current.last_updated;
+
+  console.log(result.location.region + ", " + result.location.country)
 
   rainChance.textContent =
     "Rain: " + result.forecast.forecastday[0].day.daily_chance_of_rain + " %";
@@ -111,6 +113,7 @@ function renderAPI(result) {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   city = searchInput.value;
+  console.log(city)
   getForecastAPI(city)
     .then(renderAPI)
     .catch((err) => {
@@ -127,4 +130,5 @@ async function getForecastAPI(location) {
   return forecast;
 }
 
-getForecastAPI("São Paulo").then(renderAPI);
+getForecastAPI('São Paulo').then(renderAPI);
+

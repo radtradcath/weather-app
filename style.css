@@ -64,6 +64,7 @@ form {
   display: flex;
   justify-content: center;
   grid-row: 2 / 3;
+  background-color: azure;
 }
 
 .today {
