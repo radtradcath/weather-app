@@ -26,7 +26,7 @@ const minTemp2 = document.querySelector(".min-temp2");
 const maxTemp2 = document.querySelector(".max-temp2");
 const toggleBtn = document.querySelector(".toggle-unit");
 let isF = false;
-let city = 'São Paulo';
+let city = "São Paulo";
 
 toggleBtn.addEventListener("click", () => {
   if (!isF) {
@@ -49,6 +49,7 @@ toggleBtn.addEventListener("click", () => {
 });
 
 function renderAPI(result) {
+  city = result.location.name;
   if (!isF) {
     maxTemp.textContent =
       "max: " + result.forecast.forecastday[0].day.maxtemp_c + " °C";
@@ -91,8 +92,6 @@ function renderAPI(result) {
   currentConditionIco.src = result.current.condition.icon;
   todayDate.textContent = result.current.last_updated;
 
-  console.log(result.location.region + ", " + result.location.country);
-
   rainChance.textContent =
     "Rain: " + result.forecast.forecastday[0].day.daily_chance_of_rain + " %";
   avgHumidity.textContent =
@@ -120,9 +119,7 @@ form.addEventListener("submit", (e) => {
     return;
   } else {
     e.preventDefault();
-    city = searchInput.value;
-    console.log(city);
-    getForecastAPI(city)
+    getForecastAPI(searchInput.value)
       .then(renderAPI)
       .catch((err) => {
         alert("Input a valid location.");
@@ -135,7 +132,7 @@ async function getForecastAPI(location) {
     `https://api.weatherapi.com/v1/forecast.json?key=69f03f565d6547a29d0143942231809&q=${location}&days=3&aqi=yes&alerts=yes`
   );
   let forecast = await todayJson.json();
-  console.log(forecast);
+
   return forecast;
 }
 
