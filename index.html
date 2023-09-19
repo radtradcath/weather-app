@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/f853d09d28.js"
@@ -16,10 +22,10 @@
       <div class="grid-container">
         <div class="top">
           <form>
-            <label for="city">Search</label>
-            <input type="text" id="city" name="city" />
+            <label for="city">Search Location</label>
+            <input type="search" id="city" name="city" />
           </form>
-          <button class="toggle-unity">Toggle</button>
+          <button class="toggle-unit">To °F</button>
         </div>
 
         <div class="middle">
@@ -61,8 +67,10 @@
               <img src="" class="fore1-ico" />
               <span class="avg-temp1"></span>
             </span>
+
             <p class="max-temp1"></p>
             <p class="min-temp1"></p>
+            <p class="daily-rain1"></p>
           </div>
 
           <div class="next-day2">
@@ -71,18 +79,10 @@
               <img src="" class="fore2-ico" />
               <span class="avg-temp2"></span>
             </span>
+
             <p class="max-temp2"></p>
             <p class="min-temp2"></p>
-          </div>
-
-          <div class="next-day3">
-            <span class="day3"></span>
-            <span class="day3-info">
-              <img src="" class="fore3-ico" />
-              <span class="avg-temp3"></span>
-            </span>
-            <p class="max-temp3"></p>
-            <p class="min-temp3"></p>
+            <p class="daily-rain2"></p>
           </div>
         </div>
       </div>
